@@ -1,14 +1,13 @@
 
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <style>
         body
         {
             background-image: linear-gradient(to right, grey, pink);
-            width: 1400px;
-            height: 2000px;
+            width: 100%;
+            height: 100%;
         }
        * 
         {
@@ -48,17 +47,19 @@
         }
         div.d
         {
+            
             position: relative;
-            float: left;
             width: 20%;
+            float: left;
             height: 50px;
             margin: 30px;
             padding: 10px;
             display: inline-block;
             color: black;
             font-size: 125%;
-            font-family: impact;
-            text-indent: 90px;
+            font-family: PMingLiU;
+            font-weight: bold;
+            text-indent: 35%;
             text-shadow: 0 0 20px black;
             border-radius: 20px;
             background-image: linear-gradient(to right, gray, blue);
@@ -70,11 +71,13 @@
         }
         div.d span
         {
+            visibility: hidden;
             opacity: 0;
         }
         div.d:hover > span 
         {
             position: relative;
+            visibility: visible;
             height: 50px;
             top: 10px;
             display: block;
@@ -95,6 +98,7 @@
         div.d span a div
         {
             visibility: hidden;
+            
         }
         div.d span a div:before
         {
@@ -120,25 +124,28 @@
             left: 60%;
             position: absolute;
         }
-        div.d span:hover
-        {
-            background-color: #808040;
-        }
         div.d span span
         {
             opacity: 0;
         }
-        div.d span > a
+        div.d span a
         {
             text-decoration: none;
+            visibility: hidden;
         }
-        div.d > span:hover 
+
+        div.d span:hover 
         {
             margin: -20px;
             margin-top: 0px;
             margin-bottom: 0px;
             transition-property: margin;
             transition-delay: 0s;
+            background-color: #808040;
+        }
+        div.d:hover span a
+        {
+            visibility: visible;
         }
         div.e
         {
@@ -186,7 +193,6 @@
             font-size: 125%;
             display: inline-block;
             position: relative;
-            float: left;
             background-color: pink;
             opacity: 0.8;
             top: 300px;
@@ -279,6 +285,7 @@
         }
         
    </style>
+   
 </head>    
 <script>
   function ShowTime()
@@ -291,32 +298,18 @@
 　setTimeout('ShowTime()',1000);
   }
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>嚕踢c++筆記</title>
 <html>
-<body onload="ShowTime()"></body>
+<body onload="ShowTime()">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+</body>
     <div id="showbox"></div>
 <header></header>
 <div class="e"></div>
-<div class="d">簡介
-<span><a href="index.html"">主頁面<div>點我連結</div></a></span>
-<span><a href="algorithm.html">演算法筆記<div>點我連結</div></a></span>
-<span><a href="https://github.com/asddzxcc1856/hellow-world">coding分享<div>點我連結</div></a></span>
-</div>
-<div class="d">功能02
-<span><a href="#">功能1</a></span>
-<span><a href="#">功能2</a></span>
-<span><a href="#">功能3</a></span>
-</div>
-<div class="d">功能03
-<span><a href="#">功能1</a></span>
-<span><a href="#">功能2</a></span>
-<span><a href="#">功能3</a></span>
-</div>
-<div class="d">功能04
-<span><a href="#">功能1</a></span>
-<span><a href="#">功能2</a></span>
-<span><a href="#">功能3</a></span>
+<div class="d">選單
+    <span><a href="index.html"">主頁面</a></span>
+    <span><a href="algorithm.html">演算法筆記</a></span>
+    <span><a href="https://github.com/asddzxcc1856/hellow-world">coding分享</a></span>
 </div>
 <div class="p">
     <span id="a">演算法列表
